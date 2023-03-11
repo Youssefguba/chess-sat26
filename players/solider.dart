@@ -1,4 +1,7 @@
-class Solider {
+import 'chess_item.dart';
+import 'player_actions.dart';
+
+class Solider extends ChessItem implements ChessActions, ChessItemActions {
   String? _color;
   String? position;
   String? _name = 'Solider';
@@ -19,7 +22,25 @@ class Solider {
     }
   }
 
-  void move() {}
+  @override
+  void kill() {
+    print('Solider is killing!');
 
-  void kill() {}
+  }
+
+  @override
+  void move() {
+    print('Solider is moving!');
+
+  }
+
+  @override
+  void jump() {
+    // TODO: implement jump
+  }
+  
+  @override
+  void fly() {
+    // TODO: implement fly
+  }
 }

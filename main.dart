@@ -1,12 +1,28 @@
+import 'players/chess_item.dart';
+import 'players/king.dart';
+import 'players/player_actions.dart';
 import 'players/solider.dart';
 
 void main() {
-  Solider solider = Solider('Red');
+  Solider soliderOne = Solider('Red');
 
-  solider.changeColor = 'Black';
-  print(solider.getColor);
+  King kingOne = King();
 
-  solider.changeColor = "Red";
+  moveSolider(soliderOne);
+  moveKing(kingOne);
 
-  print(solider.getColor);
+  move(kingOne);
+  move(soliderOne);
+}
+
+void move(ChessActions chess) {
+  chess.move();
+}
+
+void moveSolider(Solider solider) {
+  solider.move();
+}
+
+void moveKing(King king) {
+  king.move();
 }
